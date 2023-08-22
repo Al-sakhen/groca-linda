@@ -1,0 +1,19 @@
+a.ahmad {
+    color: red;
+    font-weight: bolder;
+}
+.logo {
+    width: 110px;
+}
+.bg_green{
+    background: #89C74A;
+}
+.nav_header {
+    font-size: 16px;
+}
+
+@media( max-width: 768px) {
+    div.border {
+        border-right: none !important;
+    }
+}
