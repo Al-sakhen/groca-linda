@@ -9,7 +9,7 @@ import {
 import { BsPinterest } from "react-icons/bs";
 import style from "./navbar.module.css";
 
-import logo from '/logo.webp'
+import logo from "/logo.webp";
 
 const Navbar = () => {
     return (
@@ -17,7 +17,12 @@ const Navbar = () => {
             <div className={style.bg_green + " " + style.nav_header}>
                 <div className="container text-white py-2 d-flex flex-column flex-md-row justify-content-between align-items-center">
                     <div className="d-flex flex-column flex-md-row">
-                        <div className={style.border + " border-end pe-2 border-1 d-flex align-items-center"}>
+                        <div
+                            className={
+                                style.border +
+                                " border-end pe-2 border-1 d-flex align-items-center"
+                            }
+                        >
                             <HiOutlineMail />
                             <span className="ms-1">info@example.com</span>
                         </div>
@@ -38,7 +43,7 @@ const Navbar = () => {
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
                 <div className="container">
                     <a className={style.ahmad + " navbar-brand"} href="#">
-                        <img src={logo} className={style.logo}  />
+                        <img src={logo} className={style.logo} />
                     </a>
                     <button
                         className="navbar-toggler"
@@ -66,39 +71,12 @@ const Navbar = () => {
                                     Cart
                                 </NavLink>
                             </li>
-                            <li className="nav-item dropdown">
-                                <a
-                                    className="nav-link dropdown-toggle"
-                                    href="#"
-                                    role="button"
-                                    data-bs-toggle="dropdown"
-                                    aria-expanded="false"
-                                >
-                                    Dropdown
-                                </a>
-                                <ul className="dropdown-menu">
-                                    <li>
-                                        <a className="dropdown-item" href="#">
-                                            Action
-                                        </a>
-                                    </li>
-                                </ul>
+                            <li className="nav-item">
+                                <NavLink className="nav-link" to="/orders">
+                                    Orders
+                                </NavLink>
                             </li>
                         </ul>
-                        <form className="d-flex" role="search">
-                            <input
-                                className="form-control me-2"
-                                type="search"
-                                placeholder="Search"
-                                aria-label="Search"
-                            />
-                            <button
-                                className="btn btn-outline-success"
-                                type="submit"
-                            >
-                                Search
-                            </button>
-                        </form>
                     </div>
                 </div>
             </nav>

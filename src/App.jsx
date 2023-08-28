@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import AppLayout from "./pages/layout/AppLayout";
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
+import Orders from "./pages/Orders";
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 
@@ -19,6 +20,7 @@ function App() {
                 <Route path="/" element={<AppLayout/>}>
                     <Route index element={<Home/>} />
                     <Route path="/cart" element={<Cart/>} />
+                    <Route path="/orders" element={<Orders/>} />
                 </Route>
             </Routes>
         </>

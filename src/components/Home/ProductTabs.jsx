@@ -4,8 +4,6 @@ import ProductsCard from "./ProductsCard";
 
 const ProductTabs = () => {
     const [currentName, setCurrentName] = useState(Products[0].name);
-
-    console.log(currentName);
     return (
         <div className="container">
             <div>
@@ -51,7 +49,7 @@ const ProductTabs = () => {
 
                 {/* items */}
                 <div className="tab-content" id="pills-tabContent">
-                    {Products.map((product, id) => {
+                    {Products.map((product) => {
                         return (
                             <div
                                 key={product.id}
@@ -67,7 +65,12 @@ const ProductTabs = () => {
                             >
                                 <div className="row">
                                     {product.items.map((item) => {
-                                        return <ProductsCard key={item.id} data={item}/>;
+                                        return (
+                                            <ProductsCard
+                                                key={item.id}
+                                                data={item}
+                                            />
+                                        );
                                     })}
                                 </div>
                             </div>

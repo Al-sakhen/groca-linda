@@ -1,7 +1,17 @@
 import { AiFillStar } from "react-icons/ai";
+import { useDispatch } from 'react-redux'
+import { addToCart } from "../../app/slices/cart/cartSlice";
+import { toast } from 'react-toastify';
 
 const ProductsCard = ({ data }) => {
     const { id, name, image, price, priceAfterDiscount } = data; // destructering
+    const dispatch = useDispatch()
+
+
+    const handleAddToCart = () => {
+        dispatch(addToCart(data))
+        toast.success("Added to cart")
+    }
 
     return (
         <div className="col-md-4 col-lg-2">
@@ -30,7 +40,7 @@ const ProductsCard = ({ data }) => {
                     )}
                 </div>
                 <div className="px-3">
-                    <button className="btn btn-success w-100 rounded-pill">Add to cart</button>
+                    <button className="btn btn-success w-100 rounded-pill" onClick={handleAddToCart}>Add to cart</button>
                 </div>
 
                 {priceAfterDiscount ? (
